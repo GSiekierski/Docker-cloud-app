@@ -47,7 +47,7 @@ Zainstalowany Docker
 ```bash
 docker compose up --build
 ```
--Po uruchomienu aplikacja będzie dostępna pod adresem:
+- Po uruchomienu aplikacja będzie dostępna pod adresem:
 localhost:3000/
 
 - Zatrzymanie aplikacji
