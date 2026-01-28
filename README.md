@@ -42,13 +42,15 @@ Projekt składa się z dwóch kontenerów:
 Zainstalowany Docker
 
 ### Instrukcja uruchomienia
-W katalogu głównym projektu wykonać polecenie:
+- W katalogu głównym projektu wykonać polecenie:
 
 ```bash
 docker compose up --build
 ```
+-Po uruchomienu aplikacja będzie dostępna pod adresem:
+localhost:3000/
 
-Zatrzymanie aplikacji
+- Zatrzymanie aplikacji
 ```bash
 docker compose down
 ```
