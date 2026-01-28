@@ -1,0 +1,15 @@
+<% const isEdit = !!project; %>
+<%- include("../layout", { title: isEdit ? "Edit Project" : "New Project", body: `
+  <h1>${isEdit ? "Edit Project" : "New Project"}</h1>
+  <form method="post" action="${isEdit ? `/projects/${project.id}` : "/projects"}">
+    <div>
+      <label>Name</label><br/>
+      <input name="name" value="${isEdit ? project.name : ""}" required />
+    </div>
+    <div>
+      <label>Description</label><br/>
+      <input name="description" value="${isEdit ? project.description : ""}" />
+    </div>
+    <button type="submit">Save</button>
+  </form>
+` }) %>

@@ -1,0 +1,15 @@
+<% const isEdit = !!user; %>
+<%- include("../layout", { title: isEdit ? "Edit User" : "New User", body: `
+  <h1>${isEdit ? "Edit User" : "New User"}</h1>
+  <form method="post" action="${isEdit ? `/users/${user.id}` : "/users"}">
+    <div>
+      <label>Name</label><br/>
+      <input name="name" value="${isEdit ? user.name : ""}" required />
+    </div>
+    <div>
+      <label>Email</label><br/>
+      <input name="email" value="${isEdit ? user.email : ""}" required />
+    </div>
+    <button type="submit">Save</button>
+  </form>
+` }) %>

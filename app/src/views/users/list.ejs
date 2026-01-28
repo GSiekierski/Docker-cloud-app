@@ -1,0 +1,15 @@
+<%- include("../layout", { title: "Users", body: `
+  <h1>Users</h1>
+  <a href="/users/new">+ Add user</a>
+  <ul>
+    ${users.map(u => `
+      <li>
+        #${u.id} ${u.name} (${u.email})
+        <a href="/users/${u.id}/edit">edit</a>
+        <form method="post" action="/users/${u.id}/delete" style="display:inline">
+          <button type="submit">delete</button>
+        </form>
+      </li>
+    `).join("")}
+  </ul>
+` }) %>

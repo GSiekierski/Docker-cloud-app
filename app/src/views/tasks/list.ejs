@@ -1,0 +1,16 @@
+<%- include("../layout", { title: "Tasks", body: `
+  <h1>Tasks</h1>
+  <a href="/tasks/new">+ Add task</a>
+  <ul>
+    ${tasks.map(t => `
+      <li>
+        #${t.id} ${t.title} [done: ${t.done}]
+        (user: ${t.user_name || "-"}) (project: ${t.project_name || "-"})
+        <a href="/tasks/${t.id}/edit">edit</a>
+        <form method="post" action="/tasks/${t.id}/delete" style="display:inline">
+          <button type="submit">delete</button>
+        </form>
+      </li>
+    `).join("")}
+  </ul>
+` }) %>
